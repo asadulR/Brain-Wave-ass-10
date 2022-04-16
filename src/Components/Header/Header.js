@@ -16,7 +16,7 @@ const Header = () => {
                             <Nav.Link as={CustomLink} to="/blog">BLOG</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#memes">
+                            <Nav.Link as={CustomLink} to="/login">
                                 LOGIN
                             </Nav.Link>
                         </Nav>
