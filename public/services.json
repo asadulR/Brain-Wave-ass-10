@@ -1,0 +1,45 @@
+[
+    {
+        "id": 101,
+        "name": "STRESS AND WORRY",
+        "price": "300",
+        "description": "I will help you to get out of your mental pressure. I will help you to create a healthy environment for your mental health. And you will be fine.",
+        "img": "https://i.ibb.co/SPQWLHD/psychiatrsitservice4.jpg"
+    },
+    {
+        "id": 102,
+        "name": "FAMILY DIFFICULTIES",
+        "price": "250",
+        "description": "Your family members are your best friend. And I'm gonne help you to believe this. I will help you to make a good relation wtth them.",
+        "img": "https://i.ibb.co/ZgX4zJq/psychiatrsitservice6.jpg"
+    },
+    {
+        "id": 103,
+        "name": "GRIEF AND LOSS",
+        "price": "250",
+        "description": "Grief is a dangerous thing that could be the worst thing to stop your progress. You need a proper treatment and friendly support. I'm gonna make it sure for you.",
+        "img": "https://i.ibb.co/qNP9WdV/psychiatriststory1.jpg"
+    },
+    {
+        "id": 104,
+        "name": "Friendly Relationship",
+        "price": "270",
+        "description": "Everyday we live with friends. You should keep your friendship well. You maybe facing some unexpected thing, I'm here for you to make your friendship well.",
+        "img": "https://i.ibb.co/QHkmrZ4/image-caption-3-1.jpg"
+    },
+    {
+        "id": 105,
+        "name": "Personal Relationship Problem",
+        "price": "370",
+        "description": "Maybe you are not passing a great time with your favourite person. Maybe he/she is not loyal to you as you are to her/him. It's a common problem in the society now a days.",
+        "img": "https://i.ibb.co/BKrKBPs/pr.jpg"
+    },
+    {
+        "id": 106,
+        "name": "Official Problem",
+        "price": "235",
+        "description": "You are not having a great working environment in your office ? Or maybe you are not doing well in your job. You can be fired at any time?",
+        "img": "https://i.ibb.co/3ShVxKr/mental.jpg"
+    }
+]
+
