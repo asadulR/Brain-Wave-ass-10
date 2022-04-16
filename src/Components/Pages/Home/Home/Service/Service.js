@@ -7,7 +7,7 @@ const Service = ({ service }) => {
             <div className='service-card'>
                 <div className='img-overely'>
                     <img className='img-fluid' src={img} alt="" />
-                    <div class="overlay">Price: ${price}</div>
+                    <div className="overlay">Price: ${price}</div>
                 </div>
                 <div className='service-div'>
                     <div className="service-info p-4">
