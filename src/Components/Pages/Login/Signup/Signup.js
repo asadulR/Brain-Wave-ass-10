@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../FormStyle.css';
+import SocialLogin from '../SocialLogin/SocialLogin';
 const Signup = () => {
     return (
         <div className='my-5 py-5'>
@@ -11,15 +12,15 @@ const Signup = () => {
                         <form id="stripe-login">
                             <div className="field mb-3 padding-bottom--24">
                                 <label htmlFor="name">Name</label>
-                                <input type="text" name="name" />
+                                <input type="text" name="name" id='name'/>
                             </div>
                             <div className="field mb-3 padding-bottom--24">
                                 <label htmlFor="email">Email</label>
-                                <input type="email" name="email" />
+                                <input type="email" name="email" id='email'/>
                             </div>
                             <div className="field mb-3 padding-bottom--24">
                                 <label htmlFor="password">Password</label>
-                                <input type="password" name="password" />
+                                <input type="password" name="password" id='password' />
                             </div>
 
                             <div className="field padding-bottom--24">
@@ -30,7 +31,7 @@ const Signup = () => {
                 </div>
                 <div className="footer-link mt-3 padding-top--24">
                     <span>Already have an account? <Link to="/login">Login</Link></span>
-
+                    <SocialLogin/>
                 </div>
             </div>
 

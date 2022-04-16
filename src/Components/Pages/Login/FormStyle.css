@@ -80,54 +80,43 @@ input[type="submit"] {
     align-items: center;
     margin: 0;
 }
-a.ssolink {
-    display: block;
-    text-align: center;
-    font-weight: 600;
-}
+
 .footer-link span {
     font-size: 14px;
     text-align: center;
 }
-.listing a {
-    color: #697386;
+.left-hr{
+    height: 1px;
+    background-color: gray;
+    width: 250px;
+}
+.right-hr{
+    height: 1px;
+    background-color: gray;
+    width: 250px;
+}
+
+.w-90{
+    width: 70%;
+    margin: 20px auto;
+}
+
+.footer-link{
+    max-width: 600px;
+    margin: auto;
+}
+
+.another-signin-btn{
+    background-color: rgb(76, 106, 151);
+    color: white;
     font-weight: 600;
-    margin: 0 10px;
+    transition: .5s;
+}
+.another-signin-btn:hover{
+    background-color: #5469D4;
+    color: white;
 }
 
-.animationRightLeft {
-  animation: animationRightLeft 2s ease-in-out infinite;
+.pointer:hover{
+    cursor: pointer;
 }
-.animationLeftRight {
-  animation: animationLeftRight 2s ease-in-out infinite;
-}
-.tans3s {
-  animation: animationLeftRight 3s ease-in-out infinite;
-}
-.tans4s {
-  animation: animationLeftRight 4s ease-in-out infinite;
-}
-
-@keyframes animationLeftRight {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(1000px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-} 
-
-@keyframes animationRightLeft {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(-1000px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-} 
