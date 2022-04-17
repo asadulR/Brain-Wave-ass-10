@@ -1,0 +1,26 @@
+.appointment-btn,
+.learn-mero-btn {
+    transition: 1s;
+    font-weight: 700;
+    letter-spacing: 0.4mm;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+}
+
+.learn-mero-btn {
+    background: linear-gradient(30deg, #E3CA94, #0FB8CD);
+}
+
+.appointment-btn {
+    margin-right: 15px;
+    background: linear-gradient(30deg, #0FB8CD, #E3CA94);
+}
+
+
+.overlyy-img{
+    transition: 1s;
+}
+.overely-container:hover .overlyy-img {
+    transform: scale(.9);
+}

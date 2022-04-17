@@ -36,7 +36,7 @@ const Blog = () => {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
-                    <Accordion.Header> <h4>What other services does firebase provide other than authentication</h4></Accordion.Header>
+                    <Accordion.Header> <h4>What other services does firebase provide other than authentication?</h4></Accordion.Header>
                     <Accordion.Body>
                         Interestingly, the Firebase platform is multifaceted, offering build tools and APIs around database management, authentication, push notifications, cloud hosting, and more.
                         <h4>Some of its key features below:</h4>
