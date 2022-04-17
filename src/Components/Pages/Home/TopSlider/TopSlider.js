@@ -1,4 +1,5 @@
 import React from 'react';
+import './TopSlider.css';
 import { Carousel } from 'react-bootstrap';
 import slider1 from '../../../images/Slider/slider1.jpg';
 import slider2 from '../../../images/Slider/slider2.jpg';
@@ -16,8 +17,8 @@ const TopSlider = () => {
                     />
                     <Carousel.Caption>
                         <h3 className='fw-bolder'>There is Always a Better Way!</h3>
-                        <p className='mb-1 mt-3'>Create a life that looks good on the insite.</p>
-                        <p>Not one that just looks good on the outside</p>
+                        <p className='mb-1 s-none mt-3'>Create a life that looks good on the insite.</p>
+                        <p className='s-none'>Not one that just looks good on the outside</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -29,7 +30,7 @@ const TopSlider = () => {
 
                     <Carousel.Caption>
                         <h3 className='fw-bold'>Get your Issues Shorted</h3>
-                        <p>Get your life back, lead a fresh new life</p>
+                        <p className='s-none'>Get your life back, lead a fresh new life</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -41,7 +42,7 @@ const TopSlider = () => {
 
                     <Carousel.Caption>
                         <p>OVER <span className='fw-bold fs-1 text-success'>97%</span> CASES SOLVED</p>
-                        <h3 className='fw-bold'>Award Winning Psychiatrist</h3>
+                        <h3 className='fw-bold s-none'>Award Winning Psychiatrist</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

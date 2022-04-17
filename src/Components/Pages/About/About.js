@@ -7,7 +7,7 @@ const About = () => {
             <h2 className='text-center my-5 py-3 about border fw-bolder'>About</h2>
             <div className='row g-3'>
                 <div className='col img-side col-12 col-md-5'>
-                    <img src={img} alt="" />
+                    <img className='img-fluid' src={img} alt="" />
                 </div>
                 <div className='col col-12 col-md-7 ps-3'>
                     <h6 className='text-gray mb-3'>Top level phychologist professional, evidenced based treatment. I diagnose the cause and provide you with the best possible treatment.</h6>
