@@ -1,0 +1,29 @@
+.about{
+    color: #0fb8cd;
+    border-radius: 40px;
+    transition: 1s;
+}
+
+.about:hover{
+    background-color: #0fb8cd;
+    color: white;
+}
+
+.img-side{
+    background-color: #E3CA94;
+}
+
+.text-gray{
+    color: gray;
+}
+
+.name{
+    color: #0fb8cd;
+    font-weight: bold;
+}
+
+
+.fs-brand-name{
+    font-size: 3rem;
+    font-family: 'Beau Rivage', cursive;
+}
