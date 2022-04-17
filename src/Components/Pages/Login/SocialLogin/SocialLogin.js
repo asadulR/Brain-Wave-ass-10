@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import '../FormStyle.css';
 import google from '../../../images/social/google.png';
-import github from '../../../images/social/github.png';
 import auth from '../../../Auth/firebase.init';
-import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../../../Loading/Loading';
 import toast from 'react-hot-toast';
@@ -11,22 +10,23 @@ import toast from 'react-hot-toast';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    const [signInWithGitHub, userGit, loadingGit, errorGit] = useSignInWithGithub(auth);
     // console.log(user)
     const navigate = useNavigate();
     let errorElement;
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
-    if(loading || loadingGit){
+    useEffect( () => {
+        if(user){
+            navigate(from, { replace: true });
+        }
+    },[user])
+
+    if(loading){
         return <Loading/>
     }
+    if (error) {
 
-    if(user){
-        navigate(from, { replace: true });
-    }
-    if (error || errorGit) {
-
-        errorElement = <p className='text-danger'>Error: {error?.message} {errorGit?.message}</p>
+        errorElement = <p className='text-danger'>Error: {error?.message} </p>
     }
     
     return (
@@ -39,7 +39,6 @@ const SocialLogin = () => {
             {errorElement}
             <div className='w-75 mx-auto'>
                 <button onClick={() => signInWithGoogle()} className='w-100 btn another-signin-btn my-2 btn-white'> <img className='me-3' src={google}  alt="" />Log in with Google</button>
-                <button onClick={() => signInWithGitHub()} className='w-100 btn another-signin-btn my-2 btn-white'> <img className='me-3' width={30}  src={github} alt="" />Log in with GitHub</button>
             </div>
         </div>
     );

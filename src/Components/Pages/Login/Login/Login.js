@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -24,19 +24,19 @@ const Login = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-
-
-    if(user){
-        navigate(from, { replace: true });
-    }
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    }, [user])
 
     const handleLogin = event => {
         event.preventDefault();
         signInWithEmailAndPassword(email, password);
     }
 
-    if(loading || sending){
-        return <Loading/>
+    if (loading || sending) {
+        return <Loading />
     }
     if (error || resetError) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
@@ -47,7 +47,7 @@ const Login = () => {
             await sendPasswordResetEmail(email);
             toast.success('Sent email');
         }
-        else{
+        else {
             toast.error('please enter your email address');
         }
     }
@@ -61,16 +61,16 @@ const Login = () => {
                         <form onSubmit={handleLogin} id="stripe-login">
                             <div className="field mb-3 padding-bottom--24">
                                 <label htmlFor="email">Email</label>
-                                <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" id='email' required/>
+                                <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" id='email' required />
                             </div>
                             <div className="field mb-3 padding-bottom--24">
                                 <div className="grid--50-50">
                                     <label htmlFor="password">Password</label>
                                     <div className="reset-pass">
-                                        <p  onClick={resetPassword} className='pointer'>Forgot your password?</p>
+                                        <p onClick={resetPassword} className='pointer'>Forgot your password?</p>
                                     </div>
                                 </div>
-                                <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" id='password' required/>
+                                <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" id='password' required />
                             </div>
                             {errorElement}
                             <div className="field padding-bottom--24">
@@ -82,7 +82,7 @@ const Login = () => {
                 <div className="footer-link mt-3 padding-top--24">
                     <span>Don't have an account? <Link to="/signup">Signup</Link></span>
                     <SocialLogin />
-                    <Toaster/>
+                    <Toaster />
                 </div>
             </div>
 

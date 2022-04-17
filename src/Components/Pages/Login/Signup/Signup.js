@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
@@ -30,9 +30,15 @@ const Signup = () => {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
 
-    // if (user) {
-    //     toast.success('Account Created!');
-    // }
+    if (user) {
+        toast.success('Account Created!');
+    }
+    useEffect(() => {
+        if (user) {
+            toast.success('Account Created!');
+            navigate('/');
+        }
+    },[user])
 
     if(loading){
         return <Loading/>
