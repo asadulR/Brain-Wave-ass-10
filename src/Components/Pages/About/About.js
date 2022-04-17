@@ -20,7 +20,7 @@ const About = () => {
                         I hope I will be able to  help people to cope with stressful situations, overcome addiction, manage their chronic illnesses,  and tests and assessments that can help diagnose a condition or tell more about the way a person thinks, feels, and behaves always.
                     </p>
 
-                    <h5 className='name mt-4'>Asadul Rahman</h5>
+                    <h5 className='name mt-4'>-- Asadul Rahman</h5>
 
                     <p className='mt-5 fs-brand-name'>Brain Wave</p>
                 </div>
