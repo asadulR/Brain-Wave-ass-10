@@ -4,7 +4,7 @@ import google from '../../../images/social/google.png';
 import github from '../../../images/social/github.png';
 import auth from '../../../Auth/firebase.init';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../../../Loading/Loading';
 import toast from 'react-hot-toast';
 
@@ -15,9 +15,14 @@ const SocialLogin = () => {
     // console.log(user)
     const navigate = useNavigate();
     let errorElement;
-
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     if(loading || loadingGit){
         return <Loading/>
+    }
+
+    if(user){
+        navigate(from, { replace: true });
     }
     if (error || errorGit) {
 
