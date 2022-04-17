@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import toast, { Toaster } from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../Auth/firebase.init';
 import Loading from '../../../Loading/Loading';
@@ -29,9 +30,9 @@ const Signup = () => {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
 
-    if (user) {
-        navigate('/home');
-    }
+    // if (user) {
+    //     toast.success('Account Created!');
+    // }
 
     if(loading){
         return <Loading/>
@@ -65,6 +66,7 @@ const Signup = () => {
                 <div className="footer-link mt-3 padding-top--24">
                     <span>Already have an account? <Link to="/login">Login</Link></span>
                     <SocialLogin />
+                    {/* <Toaster/> */}
                 </div>
             </div>
 

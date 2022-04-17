@@ -6,6 +6,7 @@ import auth from '../../../Auth/firebase.init';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import Loading from '../../../Loading/Loading';
+import toast from 'react-hot-toast';
 
 
 const SocialLogin = () => {
@@ -22,9 +23,6 @@ const SocialLogin = () => {
 
         errorElement = <p className='text-danger'>Error: {error?.message} {errorGit?.message}</p>
     }
-
-
-
     
     return (
         <div>

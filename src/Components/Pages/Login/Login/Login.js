@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import toast, { Toaster } from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../Auth/firebase.init';
 import Loading from '../../../Loading/Loading';
@@ -13,7 +14,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth);
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -34,17 +35,17 @@ const Login = () => {
     if(loading || sending){
         return <Loading/>
     }
-    if (error) {
+    if (error || resetError) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
 
     const resetPassword = async () => {
         if (email) {
             await sendPasswordResetEmail(email);
-            toast('Sent email');
+            toast.success('Sent email');
         }
         else{
-            toast('please enter your email address');
+            toast.error('please enter your email address');
         }
     }
 
@@ -78,6 +79,7 @@ const Login = () => {
                 <div className="footer-link mt-3 padding-top--24">
                     <span>Don't have an account? <Link to="/signup">Signup</Link></span>
                     <SocialLogin />
+                    <Toaster/>
                 </div>
             </div>
 
